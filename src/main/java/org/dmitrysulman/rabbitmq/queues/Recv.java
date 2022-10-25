@@ -1,4 +1,4 @@
-package org.dmitrysulman.rabbitmq;
+package org.dmitrysulman.rabbitmq.queues;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
