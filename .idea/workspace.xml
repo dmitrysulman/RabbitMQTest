@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51883e29-d586-4793-8327-6da3d80a5ebc" name="Changes" comment="pubsub">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dmitrysulman/rabbitmq/routing/EmitLogDirect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dmitrysulman/rabbitmq/routing/ReceiveLogsDirect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dmitrysulman/rabbitmq/Recv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dmitrysulman/rabbitmq/queues/Recv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dmitrysulman/rabbitmq/Send.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dmitrysulman/rabbitmq/queues/Send.java" afterDir="false" />
+    <list default="true" id="51883e29-d586-4793-8327-6da3d80a5ebc" name="Changes" comment="topic">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,15 +38,29 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/d1304/IdeaProjects/RabbitMQTest/src/main/java/org/dmitrysulman/rabbitmq/routing"
+    "last_opened_file_path": "C:/Users/d1304/IdeaProjects/RabbitMQTest/src/main/java/org/dmitrysulman/rabbitmq/topics"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\d1304\IdeaProjects\RabbitMQTest\src\main\java\org\dmitrysulman\rabbitmq\topics" />
       <recent name="C:\Users\d1304\IdeaProjects\RabbitMQTest\src\main\java\org\dmitrysulman\rabbitmq\routing" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ReceiveLogsDirect">
+  <component name="RunManager" selected="Application.ReceiveLogs">
+    <configuration name="EmitLogDirect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dmitrysulman.rabbitmq.topic.EmitLogDirect" />
+      <module name="RabbitMQTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dmitrysulman.rabbitmq.topic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReceiveLogs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.dmitrysulman.rabbitmq.pubsub.ReceiveLogs" />
       <module name="RabbitMQTest" />
@@ -90,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Send" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.dmitrysulman.rabbitmq.queues.Send" />
+    <configuration name="org.dmitrysulman.rabbitmq.topic.ReceiveLogsDirect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dmitrysulman.rabbitmq.topic.ReceiveLogsDirect" />
       <module name="RabbitMQTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.dmitrysulman.rabbitmq.queues.*" />
+          <option name="PATTERN" value="org.dmitrysulman.rabbitmq.topic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,17 +115,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.EmitLogDirect" />
+      <item itemvalue="Application.org.dmitrysulman.rabbitmq.topic.ReceiveLogsDirect" />
       <item itemvalue="Application.ReceiveLogs" />
       <item itemvalue="Application.ReceiveLogsDirect" />
       <item itemvalue="Application.Recv" />
-      <item itemvalue="Application.Send" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ReceiveLogsDirect" />
         <item itemvalue="Application.ReceiveLogs" />
+        <item itemvalue="Application.org.dmitrysulman.rabbitmq.topic.ReceiveLogsDirect" />
+        <item itemvalue="Application.EmitLogDirect" />
+        <item itemvalue="Application.ReceiveLogsDirect" />
         <item itemvalue="Application.Recv" />
-        <item itemvalue="Application.Send" />
       </list>
     </recent_temporary>
   </component>
@@ -127,7 +140,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666206266178</updated>
       <workItem from="1666206267772" duration="8152000" />
-      <workItem from="1666330571498" duration="6695000" />
+      <workItem from="1666330571498" duration="11867000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1666268760943</created>
@@ -143,7 +156,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666698783900</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="routing">
+      <created>1666702399141</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666702399141</updated>
+    </task>
+    <task id="LOCAL-00004" summary="topic">
+      <created>1666787836506</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666787836506</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +190,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="pubsub" />
-    <option name="LAST_COMMIT_MESSAGE" value="pubsub" />
+    <MESSAGE value="routing" />
+    <MESSAGE value="topic" />
+    <option name="LAST_COMMIT_MESSAGE" value="topic" />
   </component>
 </project>
