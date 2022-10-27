@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51883e29-d586-4793-8327-6da3d80a5ebc" name="Changes" comment="topic">
+    <list default="true" id="51883e29-d586-4793-8327-6da3d80a5ebc" name="Changes" comment="publisher confirms">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dmitrysulman/rabbitmq/rpc/RPCClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dmitrysulman/rabbitmq/rpc/RPCServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dmitrysulman/rabbitmq/publisherconfirms/PublisherConfirms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dmitrysulman/rabbitmq/publisherconfirms/PublisherConfirms.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-18.0.2.1/lib/src.zip!/java.base/java/util/Map.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -38,7 +44,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/d1304/IdeaProjects/RabbitMQTest/src/main/java/org/dmitrysulman/rabbitmq/topics"
+    "last_opened_file_path": "C:/Users/d1304/IdeaProjects/RabbitMQTest/src/main/java/org/dmitrysulman/rabbitmq/topics",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -47,13 +54,39 @@
       <recent name="C:\Users\d1304\IdeaProjects\RabbitMQTest\src\main\java\org\dmitrysulman\rabbitmq\routing" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ReceiveLogs">
-    <configuration name="EmitLogDirect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.dmitrysulman.rabbitmq.topic.EmitLogDirect" />
+  <component name="RunManager" selected="Application.RPCClient">
+    <configuration name="PublisherConfirms" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dmitrysulman.rabbitmq.publisherconfirms.PublisherConfirms" />
       <module name="RabbitMQTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.dmitrysulman.rabbitmq.topic.*" />
+          <option name="PATTERN" value="org.dmitrysulman.rabbitmq.publisherconfirms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RPCClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dmitrysulman.rabbitmq.rpc.RPCClient" />
+      <module name="RabbitMQTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dmitrysulman.rabbitmq.rpc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RPCServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dmitrysulman.rabbitmq.rpc.RPCServer" />
+      <module name="RabbitMQTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dmitrysulman.rabbitmq.rpc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,33 +100,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.dmitrysulman.rabbitmq.pubsub.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReceiveLogsDirect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.dmitrysulman.rabbitmq.routing.ReceiveLogsDirect" />
-      <module name="RabbitMQTest" />
-      <option name="PROGRAM_PARAMETERS" value="info" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.dmitrysulman.rabbitmq.routing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Recv" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.dmitrysulman.rabbitmq.queues.Recv" />
-      <module name="RabbitMQTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.dmitrysulman.rabbitmq.queues.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,19 +121,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.EmitLogDirect" />
+      <item itemvalue="Application.PublisherConfirms" />
+      <item itemvalue="Application.RPCClient" />
+      <item itemvalue="Application.RPCServer" />
       <item itemvalue="Application.org.dmitrysulman.rabbitmq.topic.ReceiveLogsDirect" />
       <item itemvalue="Application.ReceiveLogs" />
-      <item itemvalue="Application.ReceiveLogsDirect" />
-      <item itemvalue="Application.Recv" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RPCClient" />
+        <item itemvalue="Application.RPCServer" />
+        <item itemvalue="Application.PublisherConfirms" />
         <item itemvalue="Application.ReceiveLogs" />
         <item itemvalue="Application.org.dmitrysulman.rabbitmq.topic.ReceiveLogsDirect" />
-        <item itemvalue="Application.EmitLogDirect" />
-        <item itemvalue="Application.ReceiveLogsDirect" />
-        <item itemvalue="Application.Recv" />
       </list>
     </recent_temporary>
   </component>
@@ -140,7 +146,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666206266178</updated>
       <workItem from="1666206267772" duration="8152000" />
-      <workItem from="1666330571498" duration="11867000" />
+      <workItem from="1666330571498" duration="25597000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1666268760943</created>
@@ -170,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666787836506</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="publisher confirms">
+      <created>1666878845688</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666878845688</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +205,7 @@
     <MESSAGE value="pubsub" />
     <MESSAGE value="routing" />
     <MESSAGE value="topic" />
-    <option name="LAST_COMMIT_MESSAGE" value="topic" />
+    <MESSAGE value="publisher confirms" />
+    <option name="LAST_COMMIT_MESSAGE" value="publisher confirms" />
   </component>
 </project>

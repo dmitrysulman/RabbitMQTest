@@ -5,10 +5,11 @@ import com.rabbitmq.client.ConfirmCallback;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
-import java.nio.charset.StandardCharsets;
+import java.time.Duration;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentNavigableMap;
 import java.util.concurrent.ConcurrentSkipListMap;
+import java.util.function.BooleanSupplier;
 
 public class PublisherConfirms {
 
@@ -22,14 +23,11 @@ public class PublisherConfirms {
         return cf.newConnection();
     }
 
-
     public static void main(String[] args) throws Exception {
         handlePublishConfirmsAsynchronously();
     }
 
     static void handlePublishConfirmsAsynchronously() throws Exception {
-        ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("localhost");
         try (Connection connection = createConnection();
              Channel channel = connection.createChannel()) {
 
@@ -61,11 +59,28 @@ public class PublisherConfirms {
                 cleanOutstandingConfirms.handle(sequenceNumber, multiple);
             });
 
+            long start = System.nanoTime();
             for (int i = 0; i < MESSAGE_COUNT; i++) {
                 String body = String.valueOf(i);
                 outstandingConfirms.put(channel.getNextPublishSeqNo(), body);
-                channel.basicPublish(queue, "", null, body.getBytes());
+                channel.basicPublish("", queue, null, body.getBytes());
             }
+
+            if (!waitUntil(Duration.ofSeconds(60), outstandingConfirms::isEmpty)) {
+                throw new IllegalStateException("All messages could not be confirmed in 60 seconds");
+            }
+
+            long end = System.nanoTime();
+            System.out.format("Published %,d messages and handled confirms asynchronously in %,d ms%n", MESSAGE_COUNT, Duration.ofNanos(end - start).toMillis());
         }
+    }
+
+    private static boolean waitUntil(Duration timeout, BooleanSupplier condition) throws InterruptedException {
+        int wait = 100;
+        while (!condition.getAsBoolean() && wait < timeout.toMillis()) {
+            Thread.sleep(100);
+            wait += 100;
+        }
+        return condition.getAsBoolean();
     }
 }
